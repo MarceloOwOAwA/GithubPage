@@ -8,8 +8,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      color: #f1f1f1;
-      background-color: #292929;
+      color: #f1f1f1;              /* Texto en blanco suave */
+      background-color: #292929;  /* Fondo uniforme */
     }
 
     /* ——— NAVBAR ——— */
@@ -21,37 +21,39 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 40px; /* Aumentado padding horizontal */
+      padding: 10px 40px;
       z-index: 1000;
     }
     nav .logo {
       font-size: 1.2em;
       font-weight: bold;
+      color: #f1f1f1;
     }
     nav .contact-btn {
       background: #f1f1f1;
-      color: #331673;
+      color: #292929;
       border: none;
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
       font-size: 0.95em;
       transition: background 0.2s;
-      margin-right: 50px; /* Espacio adicional desde el borde */
+      margin-right: 50px;
     }
     nav .contact-btn:hover {
-      background: #292929;
+      background: #e1e1e1;
     }
 
     /* ——— HERO ——— */
     .hero {
-      padding: 120px 20px 60px; /* espacio para navbar fija */
+      padding: 120px 20px 60px;
       text-align: center;
       background: #292929 url('hero-bg.jpg') center/cover no-repeat;
     }
     .hero h1 {
       margin: 0;
       font-size: 2.5em;
+      color: #f1f1f1;
     }
     .hero p {
       margin-top: 10px;
@@ -60,6 +62,7 @@
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+      color: #f1f1f1;
     }
 
     /* ——— SECCIÓN QUIÉN SOY ——— */
@@ -77,7 +80,7 @@
     .seccion-quien-soy p {
       font-size: 1.1em;
       line-height: 1.6;
-      color: #fff;
+      color: #f1f1f1;
     }
 
     /* ——— SECCIÓN CATEGORÍAS ——— */
@@ -97,7 +100,7 @@
       flex-wrap: wrap;
     }
     .categoria {
-      background-color: white;
+      background-color: #1e1e1e; /* oscuro para contraste */
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       width: 200px;
