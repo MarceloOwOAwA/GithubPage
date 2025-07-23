@@ -6,43 +6,98 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #331673;
       margin: 0;
       padding: 0;
       color: #8bc34a;
+      background-color: #331673;
     }
 
-    header {
-      font-size: 2em;
-      margin-top: 20px;
+    /* ——— NAVBAR ——— */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(51,22,115, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
       color: #8bc34a;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 0.7;
     }
 
-    h2 {
-      margin-top: 40px;
-      color: #8bc34a;
+    /* ——— HERO ——— */
+    .hero {
+      padding: 120px 20px 60px; /* deja espacio para navbar fija */
+      text-align: center;
+      background: #331673 url('hero-bg.jpg') center/cover no-repeat; /* reemplaza imagen si quieres */
     }
-
-    .seccion-quien-soy {
+    .hero h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      line-height: 1.4;
       max-width: 800px;
-      margin: 40px auto 0;
-      padding: 0 20px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
+    /* ——— SECCIÓN QUIÉN SOY ——— */
+    .seccion-quien-soy {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .seccion-quien-soy h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #8bc34a;
+    }
     .seccion-quien-soy p {
       font-size: 1.1em;
       line-height: 1.6;
+      color: #fff;
     }
 
+    /* ——— SECCIÓN CATEGORÍAS ——— */
+    .seccion-categorias {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .seccion-categorias h2 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+      color: #8bc34a;
+    }
     .categorias {
       display: flex;
       justify-content: center;
       gap: 40px;
-      margin-top: 30px;
       flex-wrap: wrap;
     }
-
     .categoria {
       background-color: white;
       border-radius: 10px;
@@ -53,47 +108,84 @@
       color: #8bc34a;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .categoria:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
-
     .categoria img {
       width: 100%;
       height: 120px;
       object-fit: cover;
       border-radius: 8px;
     }
-
     .categoria-title {
       margin-top: 15px;
       font-weight: bold;
       font-size: 1.1em;
       color: #8bc34a;
     }
+
+    /* ——— PLACEHOLDER SECCIONES FALTANTES ——— */
+    /* .seccion-proyectos { … } */
+    /* .seccion-cta { … } */
+    /* footer { … } */
   </style>
 </head>
 <body>
-  <header>Marcelo Órdenes Albornoz</header>
-  <header>Ingeniero Civil en Informática</header>
 
-  <div class="seccion-quien-soy">
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Marcelo Órdenes Albornoz</div>
+    <ul>
+      <li><a href="#quien-soy">Quién soy</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <h1>Ingeniero Civil en Informática</h1>
+    <p>Bienvenido a mi espacio profesional: aquí encontrarás mis proyectos, experiencias y la pasión que pongo en cada línea de código.</p>
+  </section>
+
+  <!-- QUIÉN SOY -->
+  <section class="seccion-quien-soy" id="quien-soy">
     <h2>¿Quién soy?</h2>
     <p>Soy Ingeniero Civil Informático titulado en la Universidad San Sebastián. Me defino como una persona comprometida, con altos estándares de cumplimiento y enfoque en la excelencia. Esta página es una invitación a conocer más sobre mí y descubrir los proyectos que he desarrollado con dedicación y pasión.</p>
-  </div>
+  </section>
 
-  <h2>Categorías</h2>
+  <!-- PROYECTOS (AÑADIR AQUÍ) -->
+  <!-- id="proyectos" -->
+  <!-- <section class="seccion-proyectos" id="proyectos">
+       [Añade aquí tus tarjetas de proyectos destacados]
+  </section> -->
 
-  <div class="categorias">
-    <a href="https://docs.google.com/presentation/d/1QC7vNRdSJtKWAIkpgQXw03iZTxhgBf-bLDsAowCAP0s/preview" target="_blank" class="categoria">
-      <img src="data-science-placeholder.jpg" alt="Data Science">
-      <div class="categoria-title">Data Science</div>
-    </a>
-    <a href="#" class="categoria">
-      <img src="full-stack-placeholder.jpg" alt="Full Stack">
-      <div class="categoria-title">Full Stack</div>
-    </a>
-  </div>
+  <!-- CATEGORÍAS -->
+  <section class="seccion-categorias" id="categorias">
+    <h2>Categorías</h2>
+    <div class="categorias">
+      <a href="https://docs.google.com/presentation/d/1QC7vNRdSJtKWAIkpgQXw03iZTxhgBf-bLDsAowCAP0s/preview" target="_blank" class="categoria">
+        <img src="data-science-placeholder.jpg" alt="Data Science">
+        <div class="categoria-title">Data Science</div>
+      </a>
+      <a href="#" class="categoria">
+        <img src="full-stack-placeholder.jpg" alt="Full Stack">
+        <div class="categoria-title">Full Stack</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA (AÑADIR AQUÍ) -->
+  <!-- <section class="seccion-cta">
+       [Texto breve + botón “Contáctame” o similar]
+  </section> -->
+
+  <!-- CONTACTO / FOOTER (AÑADIR AQUÍ) -->
+  <!-- <footer id="contacto">
+       [Formulario o enlaces a LinkedIn, GitHub, email…]
+  </footer> -->
+
 </body>
 </html>
