@@ -1,2 +1,82 @@
-<header>Marcelo Ordenes Albornoz</header>
-<header>Ingeniero Civil en informatica</header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Marcelo Órdenes Albornoz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      font-size: 2em;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #222;
+    }
+
+    .categorias {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .categoria {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 200px;
+      padding: 20px;
+      text-decoration: none;
+      color: black;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .categoria:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .categoria img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .categoria-title {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <header>Marcelo Órdenes Albornoz</header>
+  <header>Ingeniero Civil en Informática</header>
+
+  <h2>Categorías</h2>
+
+  <div class="categorias">
+    <a href="#" class="categoria">
+      <img src="data-science-placeholder.jpg" alt="Data Science">
+      <div class="categoria-title">Data Science</div>
+    </a>
+    <a href="#" class="categoria">
+      <img src="full-stack-placeholder.jpg" alt="Full Stack">
+      <div class="categoria-title">Full Stack</div>
+    </a>
+  </div>
+</body>
+</html>
+
