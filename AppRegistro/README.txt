@@ -1,4 +1,7 @@
 Preparativos
+	Descargar PostulacionMarceloOrdenes.7z 
+	Descomprimir PostulacionMarceloOrdenes.7z 
+
 	Instalar Python Powershell
 		winget install python
 	Instalar Docker desde pagina web
