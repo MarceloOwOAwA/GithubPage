@@ -7,6 +7,20 @@ Preparativos
 	Instalar Docker desde pagina web
 		https://www.docker.com/products/docker-desktop/
 ---------------------------------------------------------------------------------
+Ejecutar aplicacion con script
+	Abrir Powershell
+	Dirigirse a la carpeta 
+		PostulacionMarceloOrdenes
+	Correr el script con el comando
+		.\iniciar_entorno.ps1
+
+
+
+NOTA: el archivo security.py no esta pensado para ocuparse en un ambiente de produccion, por lo que la SECRET_KEY del proyecto se configuró como
+"mi_clave_secreta_super_segura" 
+En producción se requiere ubicar esta contraseña en un archivo.env y leerlo desde ese archivo 
+
+---------------------------------------------------------------------------------
 Ejecutar aplicacion de forma manual
 	Abrir Powershell
 
@@ -25,16 +39,3 @@ Ejecutar aplicacion de forma manual
 		http://localhost:8000/docs 
 	Correr aplicacion python ubicada en 
 		PostulacionMarceloOrdenes\AppRegistro
----------------------------------------------------------------------------------
-Ejecutar aplicacion con script
-	Abrir Powershell
-	Dirigirse a la carpeta 
-		PostulacionMarceloOrdenes
-	Correr el script con el comando
-		.\iniciar_entorno.ps1
-
-
-
-NOTA: el archivo security.py no esta pensado para ocuparse en un ambiente de produccion, por lo que la SECRET_KEY del proyecto se configuró como
-"mi_clave_secreta_super_segura" 
-En producción se requiere ubicar esta contraseña en un archivo.env y leerlo desde ese archivo 
