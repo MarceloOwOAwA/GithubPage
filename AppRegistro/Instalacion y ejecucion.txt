@@ -11,6 +11,8 @@ Ejecutar aplicacion con script
 	Abrir Powershell
 	Dirigirse a la carpeta 
 		PostulacionMarceloOrdenes
+	Darle permiso al archivo para ejecutar
+		Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 	Correr el script con el comando
 		.\iniciar_entorno.ps1
 
