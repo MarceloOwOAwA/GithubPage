@@ -32,3 +32,9 @@ Ejecutar aplicacion con script
 		PostulacionMarceloOrdenes
 	Correr el script con el comando
 		.\iniciar_entorno.ps1
+
+
+
+NOTA: el archivo security.py no esta pensado para ocuparse en un ambiente de produccion, por lo que la SECRET_KEY del proyecto se configuró como
+"mi_clave_secreta_super_segura" 
+En producción se requiere ubicar esta contraseña en un archivo.env y leerlo desde ese archivo 
