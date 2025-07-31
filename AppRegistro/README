@@ -28,17 +28,32 @@ Contenedorización completa:
   Todo el entorno puede desplegarse con docker-compose en cuestión de segundos.
 
 Estructura de carpetas
-    .
-    ├── app/
-    │   ├── main.py                # Punto de entrada de la API
-    │   ├── models.py              # Esquemas Pydantic para validación
-    │   ├── auth.py                # Funciones de hashing y JWT
-    │   ├── database.py            # Conexión con MongoDB
-    ├── .env                       # Variables sensibles (no se sube al repo)
-    ├── requirements.txt           # Dependencias del proyecto
-    ├── Dockerfile                 # Imagen de FastAPI
-    ├── docker-compose.yml         # Servicio API + MongoDB
-    └── README.md                  # Documentación del proyecto
+
+    user_api/
+├── app/
+│   ├── main.py  # Punto de entrada de la API
+│   ├── database/
+│   │   └── database.py # Configuración de conexión a MongoDB
+│   ├── dependencies/
+│   │   └── auth.py  # Funciones de hashing y JWT
+│   ├── models/
+│   │   └── user.py  # Esquemas Pydantic para validación
+│   ├── routes/
+│   │   ├── auth.py  # Registro de usuarios (Signup)
+│   │   ├── login.py  # Login de usuario
+│   │   └── user.py  # Ruta para registro (POST /user/register)
+│   ├── schemas/
+│   │   └── user.py   #Modelos Pydantic para validación y serialización (UserCreate, UserOut, LoginRequest, UserResponse)
+│   ├── services/
+│   ├── utils/
+│   │   └── security.py   # Funciones de hashing y JWT
+│   └── __pycache__/  # (omitido en el repo, generado automáticamente)
+├── mongo_data/       # Contiene archivos internos de MongoDB
+├── docker-compose.yml # Servicio API + MongoDB
+├── Dockerfile  # Dockerfile para construir la imagen de la API
+├── requirements.txt  #Archivo utilizado para leer las dependencias a instalar
+
+
 
 Notas finales
   Este proyecto es ideal para aprender buenas prácticas de desarrollo backend con Python y despliegue con Docker.
